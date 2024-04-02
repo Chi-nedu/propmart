@@ -1,0 +1,51 @@
+.footer{
+    @apply pt-[4rem] bg-[var(--footer-bg)] text-[--footer-text];
+}
+.links{
+    @apply flex gap-4 justify-between pr-[4rem] pb-[4rem];
+}
+.other{
+    @apply flex justify-between pt-[1rem];
+}
+.socials{
+    @apply flex gap-[1rem] text-[1.5rem] ;
+}
+.copy{
+    @apply font-[600] text-[0.8rem]
+}
+.socials a {
+    @apply transition duration-200  hover:opacity-70;
+}
+.container hr{
+    @apply border-b-[0.01rem] opacity-70 border-[var(--text-gold)];
+}
+.footerLink{
+    @apply flex flex-col gap-[0.5rem];
+}
+.footerLink h1{
+    @apply font-[800] text-[1.2rem] pl-1 mb-[0.6rem] border-l-[0.2rem] text-[var(--text-gold)] border-[var(--text-gold)];
+    line-height: 1.4rem;
+}
+.footerLink li{
+    @apply overflow-x-clip;
+}
+.footerLink a{
+    @apply font-[600] pb-1 relative overflow-x-hidden;
+}
+.footerLink a::after{
+    @apply w-full hover:translate-x-0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-bottom: var(--text-gold) 0.1rem solid;
+    transform: translateX(-100%);
+    transition-duration: 0.4s;
+}
+@media screen and (max-width: 700px) {
+    .links{
+        @apply flex-col gap-8;
+    }
+}

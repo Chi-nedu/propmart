@@ -6,28 +6,57 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bg-white-light: rgba(255, 255, 255, 0.2) ;
+  --bg-nav-hover: rgb(68, 63, 96);
+  --category-bg: rgb(249, 228, 221);
+  --cart-bg: rgb(0, 38, 255);
+
+
+
+  /* text */
+  --cart-text: white;
+  --text-black-light: rgb(134, 133, 133);
+  --footer-text: white;
+  --text-gold: #D3AF37;
+
+  /* borders */
+  --border-black-light: rgba(39, 38, 38, 0.1);
+  --bg-dark-blue: rgb(0, 38, 255);
+  --text-white: white;
+  --toggle-bg: rgb(0, 38, 255);
+  --footer-bg: rgba(49, 49, 51, .95);
+
+
+  /* login colors /////////////////////////////////// */
+  --clr-login-bg: rgba(128, 128, 128, 0.95);
+}
+body{
+  overflow-x: hidden;
+}
+input{
+  @apply bg-transparent outline-0;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.Logintitle{
+  @apply opacity-40 -mt-[1rem];
+}
+input, button{
+  outline: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.width{
+    max-width: 1400px;
+    margin: auto;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.blackdrop{
+  @apply bg-black/20;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.pad{
+  @apply px-[2rem] ;
+}
+@media screen and (max-width: 1024px) {
+  
 }
